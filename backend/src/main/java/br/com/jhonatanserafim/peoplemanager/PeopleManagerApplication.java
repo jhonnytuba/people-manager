@@ -11,8 +11,6 @@ import org.springframework.data.web.config.EnableSpringDataWebSupport;
 public class PeopleManagerApplication {
 
     // TODO: criar testes
-    // TODO: descrever o README.md
-    // TODO: criar o build-and-deploy-image.sh
 
     public static void main(String[] args) {
         SpringApplication.run(PeopleManagerApplication.class, args);
