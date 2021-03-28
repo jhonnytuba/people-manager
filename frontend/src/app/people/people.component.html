@@ -1,0 +1,54 @@
+<div class="container-xl py-2 py-3 py-lg-4">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2 class="font-weight-bold">Pessoas</h2>
+    </div>
+    <div class="col-sm-6 text-right">
+      <button type="button" class="btn btn-success" (click)="addNew()">Adicionar uma nova Pessoa</button>
+    </div>
+  </div>
+
+  <hr class="mt-3"/>
+
+  <div class="text-center" *ngIf="!people.length">Nenhum registro! Tente adicionar uma nova Pessoa.</div>
+
+  <div class="card mt-2" *ngFor="let item of people">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-1 font-weight-bold">#</div>
+        <div class="col-5 font-weight-bold">Nome</div>
+        <div class="col-3 font-weight-bold">CPF</div>
+        <div class="col-3 font-weight-bold">Sexo</div>
+      </div>
+      <div class="row">
+        <div class="col-1" [innerHTML]="item.id"></div>
+        <div class="col-5" [innerHTML]="item.name"></div>
+        <div class="col-3" [innerHTML]="item.cpf"></div>
+        <div class="col-3" [innerHTML]="item.gender | personGender"></div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-4 font-weight-bold">E-mail</div>
+        <div class="col-2 font-weight-bold">Nascimento</div>
+        <div class="col-3 font-weight-bold">Naturalidade</div>
+        <div class="col-3 font-weight-bold">Nacionalidade</div>
+      </div>
+      <div class="row">
+        <div class="col-4" [innerHTML]="item.email"></div>
+        <div class="col-2" [innerHTML]="item.birthDate | date:'shortDate'"></div>
+        <div class="col-3" [innerHTML]="item.naturalness"></div>
+        <div class="col-3" [innerHTML]="item.nationality"></div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-9 font-weight-bold">Endereço</div>
+        <div class="col-3 font-weight-bold">Ações</div>
+      </div>
+      <div class="row">
+        <div class="col-9" [innerHTML]="item.address"></div>
+        <div class="col-3">
+          <button type="button" class="btn btn-info btn-sm" (click)="edit(item)">Editar</button>
+          <button type="button" class="btn btn-danger btn-sm ml-1" (click)="delete(item)">Deletar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
