@@ -15,6 +15,7 @@ import { DeletePersonModalTemplateComponent } from './people/delete-person-modal
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SavePersonModalTemplateComponent } from './people/save-person-modal-template.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SourceComponent } from './source/source.component';
 
 registerLocaleData(localeBR);
 
@@ -24,7 +25,8 @@ registerLocaleData(localeBR);
     DeletePersonModalTemplateComponent,
     SavePersonModalTemplateComponent,
     AppComponent,
-    PeopleComponent
+    PeopleComponent,
+    SourceComponent
   ],
   imports: [
     BrowserModule,

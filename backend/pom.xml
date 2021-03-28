@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>br.com.jhonatanserafim</groupId>
-    <artifactId>people-manager</artifactId>
+    <artifactId>people-manager-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>people-manager</name>
+    <name>people-manager-api</name>
     <description>Cadastro de Pessoas</description>
 
     <properties>

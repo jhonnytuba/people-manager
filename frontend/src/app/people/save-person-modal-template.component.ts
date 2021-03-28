@@ -166,7 +166,7 @@ export class SavePersonModalTemplateComponent implements OnInit {
 
     observable.subscribe(
       () => {
-        this.alertModalService.toastError('Pessoa "' + this.item.name + '" salva com sucesso!');
+        this.alertModalService.toastSuccess('Pessoa "' + this.item.name + '" salva com sucesso!');
         this.onClose.next(true);
         this.bsModalRef.hide();
         this.isSaving = false;
